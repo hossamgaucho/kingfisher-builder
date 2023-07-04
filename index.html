@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>&lt;model-viewer&gt; template</title>
+    <meta charset="utf-8">
+    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='webfonts/uicons-solid-rounded.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+    <!-- OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+    
+  </head>
+  <body>
+    <div class="nav-bar">
+      <img class="logo" src="logo-kingfisher-bird.png" alt="">
+      <h3 class="title">kingfisher new advanced builder</h3>
+      <a href='https://kingfisherboats.com/' role="button" class="kf-website">Learn More  <i class=fi-sr-arrow-alt-circle-right></i></a>
+    </div>
+    <!-- <model-viewer> HTML element -->
+    <div class="threed">
+      <div>
+       <model-viewer camera-controls src="GFX.glb" environment-image='artist_workshop_2k.hdr' disable-zoom ar camera-orbit='30deg 80deg 8m'>
+           <button slot="ar-button" style="visibility: hidden;"></button>
+       </model-viewer>
+      </div>
+      <div class="builder">
+       <div>
+        <h2><i class="fi fi-sr-video-camera-alt"></i> Views:</h2>
+        <button class="btn-angle1"><i class="fi fi-sr-eye"></i> View 1</button>
+        <button class="btn-angle2"><i class="fi fi-sr-eye"></i> View 2</button>
+       </div>
+       <div>
+        <h2> <i class="fi fi-sr-layers"></i> Waterline Option</h2>
+        <button class="btn-red">RED</button>
+        <button class="btn-green">GREEN</button>
+        <button class="btn-blue">BLUE</button>
+        <button class="btn-hide"><i class="fi fi-sr-eye-crossed"></i> Remove</button>
+       </div>
+       <div>
+        <h2> <i class="fi fi-sr-bolt"></i> Radar Option</h2>
+        <button class="radar-show"> <i class="fi fi-sr-plus"></i> Radar Option</button>
+        <button class="radar-remove"><i class="fi fi-sr-eye-crossed"></i> Remove</button>
+       </div>
+      </div>
+    </div>
+    <div class="footer"><p>Created by SAM, 3D Artist & Developer @ 5 Star Media Group <i class="fi fi-sr-heart"></i> </p></div>
+    
+    <script type="module" src="script.js"></script>
+    <!-- Loads <model-viewer> for browsers: -->
+      <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  </body>
+</html>
